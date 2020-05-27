@@ -68,7 +68,7 @@ export class NavBar extends Component {
               </li>
               <li className="nav-item mt-2 mx-2">
                 <a className="nav-link text-danger" href="#">
-                  {customer ? `Welcome ${customer.user.username}` : "Guest"}
+                  {customer ? `Welcome ${customer.user.username}` : "Guest User"}
                 </a>
               </li>
             </ul>
