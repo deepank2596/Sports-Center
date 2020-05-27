@@ -5,6 +5,6 @@ services:
         build:  .
         command:    python manage.py runserver 0.0.0.0:8000
         volumes:
-            -   .:/myapp
+            -   C:/Users/DeepankShashank/Desktop/Docker/restpractice:/myapp
         ports:
             -   "8000:8000"
