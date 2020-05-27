@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import NavBar from "./NavBar";
-import ProductsGrid from "./ProductsGrid";
+import ProductsPage from "./products/ProductsPage";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import LoginForm from "./LoginForm";
-import RegisterForm from "./RegisterForm";
+import LoginForm from "./authforms/LoginForm";
+import RegisterForm from "./authforms/RegisterForm";
 import { Provider } from "react-redux";
 import store from "../store/store";
 import { loadUser } from "../actions/authActions";
-import CartGrid from "./CartGrid";
+import CartGrid from "./cart/CartGrid";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
-import Alert from "./Alert";
+import Alert from "./commons/Alert";
+import PrivateRoute from "./commons/PrivateRoute";
 const options = {
   // you can also just use 'bottom center'
   position: positions.TOP_CENTER,
@@ -33,8 +34,7 @@ export class app extends Component {
             <div>
               <Switch>
                 <Route exact path="/sports-center/">
-                  <NavBar />
-                  <ProductsGrid />
+                  <PrivateRoute component={ProductsPage} />
                 </Route>
                 <Route exact path="/cart">
                   <NavBar />
