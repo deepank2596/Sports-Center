@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { register } from "../actions/authActions";
+import { register } from "../../actions/authActions";
 import { Redirect } from "react-router-dom";
-import { createMessage } from "../actions/messageActions";
+import { createMessage } from "../../actions/messageActions";
 
 class RegisterForm extends Component {
   constructor(props) {

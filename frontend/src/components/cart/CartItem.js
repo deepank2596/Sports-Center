@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import ShopItem from "./ShopItem";
+import ShopItem from "../commons/ShopItem";
 import { connect } from "react-redux";
-import { removeFromCart } from "../actions/cartActions";
+import { removeFromCart } from "../../actions/cartActions";
 export class CartItem extends Component {
   handleClick = (e) => {
     e.preventDefault();
